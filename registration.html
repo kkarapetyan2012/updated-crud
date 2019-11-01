@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="0; url=http://www.mydomain.com/new-page.html"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <title>Registration</title>
+</head>
+<body>
+    <div class="container d-flex justify-content_center">
+        <div class="center">
+            <header class="d-flex justify-content_flex-end align-items_center box-shadow">
+                <a href="index.html">Home</a>
+                <a href="login.html">Log In</a>
+                <a href="news.html">News</a>
+            </header>
+            <div class="d-flex justify-content_center">
+                <!-- aranc flex-i, parentin ktayi pos relativ; height: ssspx,child pos absolute,top: x%; left: y;transform:translate(-50%,-50%) kam
+                left: 0; right: 0; top: 0; bottom: 0; margin: auto; -->
+                <div class="box-shadow login-form">
+                    <div class="d-flex flex-direction_column">
+
+                        <input type="text" name="firstname" placeholder="First Name" id="firstname" />
+                        <input type="text" name="lastname" placeholder="Last Name" id="lastname" />
+                        <input type="text" name="username" placeholder="username" id="username" />
+                        <input type="email" name="email" placeholder="email" id="email" />
+                        <input type="password" name="password" placeholder="password" id="password" />
+                        
+                        <select id="select">
+                            <option style="color: gray" value="0">City</option>
+                            <option value="1">Yerevan</option>
+                            <option value="2">Moscow</option>
+                            <option value="3">New York</option>
+                            <option value="4">London</option>
+                            <option value="5">Berlin</option>
+                            <option value="6">Madrid</option>
+                            <option value="7">Rome</option>
+                        </select>
+                        <div class="d-flex justify-content_flex-start gender">
+                            <div>
+                                <input type="radio" name="gender" value="male" checked /> <label for="">Male</label> 
+                            </div>
+                            <div>
+                                <input type="radio" name="gender" value="female" /> <label for="">Female</label> 
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content_space-between align-items_center submit-block">
+                            <div class="d-flex justify-content_space-between align-items_center">
+                                <input type="checkbox" name="" value=""><label for="">Send me Email</label>
+                            </div>
+                            
+                            <button type="submit" id="reg" class="box-shadow">Registration</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- <footer>
+    
+            </footer> -->
+        </div>
+        
+        
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#select').css('color','gray');
+            $('#select').change(function() {
+                var current = $('#select').val();
+                if (current != '0') {
+                    $('#select').css('color','black');
+                } else {
+                    $('#select').css('color','gray');
+                }
+            }); 
+        })
+    </script>
+    <script src="./src/js/registration.js"></script>
+</body>
+</html>

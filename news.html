@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="./src/js/main.js"></script>
+    <title>Document</title>
+</head>
+<body onload="onReady()">
+    <div id="myModal" class="myModal" onclick="showModal()">
+        <div class="modal">
+            <div class="modalHeader d-flex justify-content_flex-end">
+                <button class="close" id="close">
+                    x
+                </button>
+            </div>
+            <div class="modalBody">
+                <input type="text" placeholder="write title" id="postTitle" />
+                <input type="text" placeholder="write article" id="description" />
+                <!-- <textarea name="" id="" cols="20" rows="10" placeholder="write article" id="description"></textarea> -->
+            </div>
+            <div class="modalFooter">
+                <!-- <button class="add" onclick="addPost()" id="add"> -->
+                <button class="add" id="add">
+
+                    Add
+                </dbutton>
+            </div>
+        </div>
+    </div>
+    <div class="container d-flex justify-content_center">
+        <div class="center">
+            <header class="d-flex justify-content_flex-end align-items_center box-shadow">
+                <a href="index.html">Home</a>
+                <a href="login.html">Log In</a>
+                <a href="registration.html">Registration</a>
+            </header>
+            <div class="content-block box-shadow">
+                <article class="box-shadow clearfix d-flex justify-content_space-between align-items_center">
+                    <div class="new-avatar d-flex justify-content_center align-items_center">
+                        <div class="avatar-img">
+                            <img src="./src/images/anonimus.jpg" alt="">
+                        </div>
+                        <p>Name Surname</p>
+                    </div>
+                    <!-- <input type="submit" value="Create new Post" placeholder="" /> -->
+                    <button onclick="showModal()">Create new Post</button>
+                </article>
+                <div class="ov_auto news-container box-shadow d-flex flex-direction_column-reverse">
+                    <!-- <section class="box-shadow section-height">
+
+                    </section>
+                    <section class="box-shadow section-height">
+                        
+                    </section>
+                    <section class="box-shadow section-height">
+                        
+                    </section>
+                    <section class="box-shadow section-height">
+                        
+                    </section>
+                    <section class="box-shadow section-height">
+                        
+                    </section>
+                    <section class="box-shadow section-height">
+                        
+                    </section>
+                    <section class="box-shadow section-height">
+                        
+                    </section> -->
+                </div>
+            </div>
+            <footer class="box-shadow">
+
+            </footer>
+        </div>
+        
+    </div>
+</body>
+</html>
